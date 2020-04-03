@@ -76,7 +76,9 @@ namespace TS3QueryLib.Net.Core.Server.Entitities
         public uint? ChannelIconId { get; protected set; }
 
         #endregion
+
         #region SecondsEmpty-Properties
+        
         public double? SecondsEmpty { get; protected set; }
 
         #endregion
