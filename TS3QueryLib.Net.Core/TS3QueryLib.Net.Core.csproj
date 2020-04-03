@@ -5,7 +5,7 @@
     <Copyright>Copyright © Jens Hofmann 2016</Copyright>
     <AssemblyTitle>TS3QueryLib.Net.Core</AssemblyTitle>
     <Authors>Jens Hofmann</Authors>
-    <TargetFrameworks>netstandard1.4;netstandard1.6;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>netstandard1.4;netstandard1.6;netstandard2.0;netstandard2.1</TargetFrameworks>
     <AssemblyName>TS3QueryLib.Net.Core</AssemblyName>
     <PackageId>TS3QueryLib.Net.Core</PackageId>
     <PackageTags>TeamSpeak;Query;C#;CSharp</PackageTags>

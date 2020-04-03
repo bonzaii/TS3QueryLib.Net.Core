@@ -76,6 +76,10 @@ namespace TS3QueryLib.Net.Core.Server.Entitities
         public uint? ChannelIconId { get; protected set; }
 
         #endregion
+        #region SecondsEmpty-Properties
+        public double? SecondsEmpty { get; protected set; }
+
+        #endregion
         #endregion
 
         #region Public Methods
@@ -106,6 +110,8 @@ namespace TS3QueryLib.Net.Core.Server.Entitities
             MaxClients = currrentParameterGroup.GetParameterValue<int?>("channel_maxclients");
             MaxFamilyClients = currrentParameterGroup.GetParameterValue<int?>("channel_maxfamilyclients");
             ChannelIconId = currrentParameterGroup.GetParameterValue<uint?>("channel_icon_id");
+
+            SecondsEmpty = currrentParameterGroup.GetParameterValue<double?>("seconds_empty");
         }
 
         #endregion

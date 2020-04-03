@@ -5,7 +5,7 @@ namespace TS3QueryLib.Net.Core.Server.Commands
 {
     public class ChannelListCommand : ExecutableEntityListCommand<ChannelListEntry>
     {
-        public ChannelListCommand(bool includeAll, bool includeTopics = false, bool includeFlags = false, bool includeVoiceInfo = false, bool includeLimits = false, bool includeIcon = false) : base("ChannelList")
+        public ChannelListCommand(bool includeAll, bool includeTopics = false, bool includeFlags = false, bool includeVoiceInfo = false, bool includeLimits = false, bool includeIcon = false, bool includeSecondsEmpty = false) : base("ChannelList")
         {
             if (includeTopics || includeAll)
                 AddOption("topic");
@@ -21,6 +21,9 @@ namespace TS3QueryLib.Net.Core.Server.Commands
 
             if (includeIcon || includeAll)
                 AddOption("icon");
+                
+            if (includeSecondsEmpty || includeAll)
+                AddOption("secondsempty");
         }
     }
 }
