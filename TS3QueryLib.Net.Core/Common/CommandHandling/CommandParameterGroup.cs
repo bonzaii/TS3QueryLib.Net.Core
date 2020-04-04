@@ -65,8 +65,13 @@ namespace TS3QueryLib.Net.Core.Common.CommandHandling
             try
             {
                 if (default(T) != null && parameterValue == null)
-                    throw new InvalidCastException(string.Format("Can not cast null value of parameter '{0}' to target type '{1}'.", parameterName, targetType));
-
+                {
+                    if (parameterName.Contains("client_icon_id"))
+                        parameterValue = "0";
+                    else
+                        throw new InvalidCastException(string.Format("Can not cast null value of parameter '{0}' to target type '{1}'.", parameterName, targetType));
+                }
+                
                 if (parameterValue != null && (targetType == typeof(uint) || targetType == typeof(uint?)))
                 {
                     decimal decimalValue = Convert.ToDecimal(parameterValue, CultureInfo.InvariantCulture);
